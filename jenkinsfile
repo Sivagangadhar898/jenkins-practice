@@ -13,8 +13,13 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                echo 'Deplying....'
+                echo 'Deploying....'
             }
+        post {
+    always {
+      echo ‘I will always execute this!’
+    }
+  }
+}
         }
     }
-}
